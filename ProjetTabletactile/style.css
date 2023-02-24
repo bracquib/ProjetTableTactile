@@ -150,3 +150,145 @@ border: 5px solid var(--other);
 }
 
 
+@media screen and (min-width: 5120px) and (min-height: 2880px) {
+  /* horloge */
+  
+  div#horloge
+  {
+  right : 50%;
+  top : 0;
+  position : absolute;
+  overflow : hidden;
+  background-color : #232323;
+  color : #FFF;
+  font-weight : bold;
+  text-align : center;
+  }
+  
+  div.horloge_heure
+  {
+  font-size : 200px;
+  background-color : #232323;
+  }
+  
+  div.horloge_date
+  {
+  font-size : 90px;
+  background-color : #232323;
+  }
+  
+  span.horloge_grey
+  {
+  color : #888;
+  font-size : inherit;
+  }
+  
+  /* meteo */
+  
+  div#meteo
+  {
+  left : 0px;
+  top : 70%;
+  position : absolute;
+  overflow : hidden;
+  background-color : #232323;
+  color : #FFF;
+  font-weight : bold;
+  text-align : center;
+  }
+  
+  div#meteo_black
+  {
+  right : 0;
+  top : 70%;
+  width : 1200px;
+  height : 1200px;
+  position : absolute;
+  z-index : 9999;
+  background-color : #232323;
+  }
+  /* rss */
+  
+  #rss
+  {
+  width : 1200px;
+  right : 0;
+  top : 70%;
+  position : absolute;
+  z-index : 99;
+  background-color :#232323;
+  }
+  
+  .rss_texte
+  {
+  color : rgb(255, 255, 255);
+  }
+  
+  #rss a
+  {
+  font-weight: bold;
+  text-decoration: none;
+  }
+  
+  #rss img
+  {
+  width: 20px;
+  height: 20px;
+  margin-left: -25px;
+  padding-right: 5px;
+  }
+  
+  /*slider*/
+  :root {
+  --white: #ffffff;
+  --text-color: #dedede;
+  --bg-color: #232323;
+  --other: #da7948;
+  }
+  
+     * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      color: var(--text-color);
+      }
+  
+  body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+  
+  .projects {
+  display: flex;
+  align-items: center;
+  gap: 4vmin;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  img.proj-img {
+  user-select: none;
+  width: 20vw;
+  height: 40vh;
+  object-fit: fill;
+  object-position: 100% center;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+  border: 0px solid var(--other);
+  }
+  
+  img.proj-img:hover {
+  width: 40vw;
+  height: 60vh;
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+  border: 5px solid var(--other);
+  
+  }}
+  
