@@ -1,27 +1,8 @@
 $(document).ready(function() {
    horloge();
-   meteo();
     rss();
 });
 
-/* meteo */
-
-var meteo_timeout;
-
-function meteo ()
-{
-  $.ajax({
-    async : false,
-    type: "GET",
-    url: "./ajax.php",
-    data: "block=meteo",
-    success: function(html){
-      $("#meteo").html(html);
-    }
-  });
-
-  meteo_timeout = setTimeout("meteo()", 3600000);
-}
 
 /* horloge */
 
