@@ -39,6 +39,8 @@
         <a href="./chess.php">
           <img draggable="false" class="proj-img" src="./chess.jpeg" srcset="">
         </a>
+        <a href="./rakura.php">
+          <img draggable="false" class="proj-img" src="./rakura.jpeg" srcset="">
         <a href="./vue2048/index.html">
           <img draggable="false" class="proj-img" src="./2048_logo.png" srcset="">
         </a>
