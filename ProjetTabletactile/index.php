@@ -49,7 +49,14 @@
         </a>
           <a href="mahjongg:">
           <img draggable="false" class="proj-img" src="./mahjongg.png" srcset="">
-        </A>
+          </a>
+          <a href="sudoku:">
+          <img draggable="false" class="proj-img" src="./sudoku.png" srcset="">
+          </a>
+          </a>
+          <a href="anix:">
+          <img draggable="false" class="proj-img" src="./dessin.png" srcset="">
+          </a>
       </div>
       <script src="./test.js"></script>
     </div>
