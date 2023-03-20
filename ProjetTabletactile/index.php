@@ -41,6 +41,9 @@
         <a href="https://www.polytech-grenoble.fr/">
           <img draggable="false" class="proj-img" src="./polytech1.png" srcset="">
         </a>
+          <a href="mahjongg:">
+          <img draggable="false" class="proj-img" src="./mahjongg.png" srcset="">
+        </A>
       </div>
       <script src="./test.js"></script>
     </div>
