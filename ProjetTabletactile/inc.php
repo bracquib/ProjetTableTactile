@@ -7,20 +7,7 @@
     return $array;
   }
 
-  /////////////////////////////////////////////////
-  //  Meteo
-  /////////////////////////////////////////////////
 
-  function meteo () {
-
-    $meteo = '<div id="cont_MzAxNDcyOHw1fDR8MXwxfCMwMDAwMDB8MnwjZmZmZmZmfGd8">
-    <div id="spa_MzAxNDcyOHw1fDR8MXwxfCMwMDAwMDB8MnwjZmZmZmZmfGd8"><a id="a_MzAxNDcyOHw1fDR8MXwxfCMwMDAwMDB8MnwjZmZmZmZmfGd8" href="https://www.meteocity.com/france/grenoble-v3014728?utm_medium=widget&utm_source=referral&utm_campaign=france-grenoble-v3014728&utm_content=location" target="_top" style="color:#333;text-decoration:none;"></a><a target="_top" href="https://www.meteocity.com?utm_medium=widget&utm_campaign=france-grenoble-v3014728&utm_content=homepage"></a></div>
-    <script type="text/javascript" src="https://www.meteocity.com/widget/js/MzAxNDcyOHw1fDR8MXwxfCMwMDAwMDB8MnwjZmZmZmZmfGd8"></script>
-</div>
-';
-
-    return $meteo;
-  }
 
 
   /////////////////////////////////////////////////
