@@ -10,7 +10,7 @@
     <meta http-equiv="refresh" content="3600;url=index.php">
     <script src="jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="javascript.js" defer></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
@@ -24,11 +24,11 @@
       
       <div id="rss"></div>
       <div id="projects-wrapper" class="projects" data-mouse-down-at="0" data-prev-percentage="0">
-        <a href="./SnakeGame/index.html">
+        <!-- <a href="./SnakeGame/index.html">
           <img draggable="false" class="proj-img" src="./snake.jpg" srcset="">
-        </a>
+        </a> -->
         <a href="./Snake-Game/index.html">
-          <img draggable="false" class="proj-img" src="./snake.jpg" srcset="">
+          <img draggable="false" class="proj-img" src="./snake.png" srcset="">
         </a>
         <a href="./parasite.php">
           <img draggable="false" class="proj-img" src="./parasite.png" srcset="">
@@ -37,7 +37,7 @@
           <img draggable="false" class="proj-img" src="./bubble.png" srcset="">
         </a>
         <a href="./chess.php">
-          <img draggable="false" class="proj-img" src="./chess.jpeg" srcset="">
+          <img draggable="false" class="proj-img" src="./chess.png" srcset="">
         </a>
         <a href="./rakura.php">
           <img draggable="false" class="proj-img" src="./rakura.jpeg" srcset="">
@@ -47,6 +47,9 @@
         <a href="https://www.polytech-grenoble.fr/">
           <img draggable="false" class="proj-img" src="./polytech1.png" srcset="">
         </a>
+          <a href="mahjongg:">
+          <img draggable="false" class="proj-img" src="./mahjongg.png" srcset="">
+        </A>
       </div>
       <script src="./test.js"></script>
     </div>
