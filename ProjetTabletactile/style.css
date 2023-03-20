@@ -114,6 +114,7 @@ body {
   width: 100vw;
   background-color: var(--bg-color);
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
 }
