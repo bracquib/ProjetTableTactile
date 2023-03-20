@@ -51,6 +51,8 @@ function rss ()
     }
   });
 
-  rss_timeout = setTimeout("rss()", 60000);
+  rss_timeout = setTimeout(() => {
+    rss();
+  }, 10000);
 }
 
