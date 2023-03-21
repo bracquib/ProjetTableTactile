@@ -57,6 +57,9 @@
           <a href="anix:">
           <img draggable="false" class="proj-img" src="./dessin.png" srcset="">
           </a>
+          <a href="fluent:">
+          <img draggable="false" class="proj-img" src="./rss.jpeg" srcset="">
+          </a>
       </div>
       <script src="./test.js"></script>
     </div>
