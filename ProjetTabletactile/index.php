@@ -60,6 +60,9 @@
           <a href="fluent:">
           <img draggable="false" class="proj-img" src="./rss.jpeg" srcset="">
           </a>
+          <a href="http://localhost:3000">
+          <img draggable="false" class="proj-img" src="./site.jpg" srcset="">
+          </a>
       </div>
       <script src="./test.js"></script>
     </div>
