@@ -10,7 +10,7 @@
     <meta http-equiv="refresh" content="3600;url=index.php">
     <script src="jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="javascript.js" defer></script>
+    <script type="text/javascript" src="javascript.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
