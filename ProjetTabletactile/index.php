@@ -24,9 +24,9 @@
       
       <div id="rss"></div>
       <div id="projects-wrapper" class="projects" data-mouse-down-at="0" data-prev-percentage="0">
-        <!-- <a href="./SnakeGame/index.html">
+         <a href="./SnakeGame/index.html">
           <img draggable="false" class="proj-img" src="./snake.jpg" srcset="">
-        </a> -->
+        </a> 
         <a href="./Snake-Game/index.html">
           <img draggable="false" class="proj-img" src="./snake.png" srcset="">
         </a>
