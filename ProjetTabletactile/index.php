@@ -24,6 +24,9 @@
       
       <div id="rss"></div>
       <div id="projects-wrapper" class="projects" data-mouse-down-at="0" data-prev-percentage="0">
+      	<a href="./phaser/test.html">
+          <img draggable="false" class="proj-img" src="./phaser/logo.jpeg" srcset="">
+        </a>
         <a href="./SnakeGame/index.html">
           <img draggable="false" class="proj-img" src="./snake.jpg" srcset="">
         </a>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemple Visionneuse Photo - Phaser</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<script>
+    const config = {
+        type: Phaser.AUTO,
+        width: window.innerWidth,
+        height: window.innerHeight,
+        backgroundColor: '#000000',
+        scene: {
+            preload: preload,
+            create: create
+        }
+    };
+
+    const game = new Phaser.Game(config);
+
+    function preload() {
+
+        this.load.image('bin', 'bin.png');
+        this.load.image('home_button', 'home_button.png');
+        this.load.image('load_button', 'load_button.png');
+        this.load.image('start_button', 'start_button.png');
+        
+    }
+
+    function create() {
+
+    var start_button = this.add.image(config.width / 2, config.height / 2, 'start_button').setInteractive();
+
+    // Calculate scale for the start button to be 10% of the total window scale
+    var buttonScale = Math.min(config.width / start_button.width, config.height / start_button.height) * 0.1;
+    start_button.setScale(buttonScale);
+
+    // Center the start button
+    start_button.setPosition(config.width / 2 - start_button.displayWidth / 2, config.height / 2 - start_button.displayHeight / 2);
+
+    var container = this.add.container(0, 0, [start_button]);
+
+    this.input.setDraggable(start_button);
+    
+    this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
+        gameObject.x = dragX;
+        gameObject.y = dragY;
+    });
+
+    start_button.on('pointerdown', loadImage, this);
+        
+    
+}
+
+
+function loadImage ()
+{
+    this.load.image('imagetest', 'phaser.png');
+    // Add a callback for when the image has been loaded
+
+
+
+    // Add a callback for when the image has been loaded
+    this.load.once('complete', () => {
+        // Add the image to the scene and make it draggable
+        const draggableImage = this.add.image(400, 300, 'imagetest').setInteractive();
+        this.input.setDraggable(draggableImage);
+
+        // Add a 'drag' event listener for the draggable image
+        this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
+            gameObject.x = dragX;
+            gameObject.y = dragY;
+        });
+    }, this);
+
+    this.load.start();
+}
+
+</script>
+</body>
+</html>
