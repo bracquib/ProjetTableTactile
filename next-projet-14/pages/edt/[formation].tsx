@@ -3,14 +3,23 @@ import {useEffect, useRef, useState} from "react";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import Link from "next/link";
+
+interface Event {
+    title: string;
+    start: string;
+    end: string;
+    extendedProps: { department: string };
+    description: string;
+}
 
 export default function Ade() {
     const router = useRouter();
     const {formation} = router.query;
-    const [events, setEvents] = useState([]);
+    const [events, setEvents] = useState<Event[]>([]);
 
     useEffect(() => {
-        let tmpEvents = [];
+        let tmpEvents: Event[] = [];
 
         if(formation !== undefined) {
             const data = require(`@/public/ade/${formation}.json`);
@@ -35,13 +44,14 @@ export default function Ade() {
 
     return (
             <div>
-                <h1 className="font-mono text-3xl text-center font-bold mb-5">
-                    <a href="/edt">
-                        Retour à l'emploi du temps 📖
-                    </a>
+                <h1 className="font-mono text-3xl text-center font-bold mb-5 mt-5">
+                    {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+                    <Link href="/edt">
+                        Retour à l&apos;emploi du temps 📖
+                    </Link>
                 </h1>
                 <FullCalendar
-                    innerRef={calendarRef}
+                    ref={calendarRef}
                     locale="fr"
                     events={events}
                     plugins={[timeGridPlugin, interactionPlugin]}
