@@ -39,28 +39,38 @@
     function create() {
 
     var start_button = this.add.image(config.width / 2, config.height / 2, 'start_button').setInteractive();
+    const resetButton = this.add.image(70, 70, 'bin').setInteractive();
 
     // Calculate scale for the start button to be 10% of the total window scale
     var buttonScale = Math.min(config.width / start_button.width, config.height / start_button.height) * 0.1;
     start_button.setScale(buttonScale);
+    var buttonScale_bin = Math.min(config.width / resetButton.width, config.height / resetButton.height) * 0.1;
+    resetButton.setScale(buttonScale );
 
-    // Center the start button
+    // Center the menu buttons
     start_button.setPosition(config.width / 2 - start_button.displayWidth / 2, config.height / 2 - start_button.displayHeight / 2);
 
-    var container = this.add.container(0, 0, [start_button]);
+    var container = this.add.container(0, 0, [start_button,resetButton]);
+
 
     this.input.setDraggable(start_button);
     
+
+
     this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
         gameObject.x = dragX;
         gameObject.y = dragY;
     });
 
     start_button.on('pointerdown', loadImage, this);
+    resetButton.on('pointerdown', () => {
+        this.scene.restart();
+    });
+
+    
         
     
 }
-
 
 function loadImage ()
 {
