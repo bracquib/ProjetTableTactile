@@ -71,29 +71,61 @@
         
     
 }
-
-function loadImage ()
-{
+function loadImage() {
     this.load.image('imagetest', 'phaser.png');
-    // Add a callback for when the image has been loaded
-
-
-
-    // Add a callback for when the image has been loaded
+    
     this.load.once('complete', () => {
-        // Add the image to the scene and make it draggable
         const draggableImage = this.add.image(400, 300, 'imagetest').setInteractive();
-        this.input.setDraggable(draggableImage);
 
-        // Add a 'drag' event listener for the draggable image
+        //adaptative size
+        var imageScaling = Math.min(config.width / draggableImage.width, config.height / draggableImage.height) * 0.3;
+        draggableImage.setScale(imageScaling);
+
+        this.input.setDraggable(draggableImage);
+        
         this.input.on('drag', function (pointer, gameObject, dragX, dragY) {
             gameObject.x = dragX;
             gameObject.y = dragY;
+        });
+
+        let pointers = [];
+        let initialDistance = 0;
+
+        draggableImage.on('pointerdown', function (pointer) {
+            pointers.push(pointer);
+            if (pointers.length === 2) {
+                initialDistance = Phaser.Math.Distance.Between(
+                    pointers[0].x, pointers[0].y,
+                    pointers[1].x, pointers[1].y
+                );
+            }
+        });
+
+        this.input.on('pointermove', function (pointer) {
+            if (pointers.length === 2) {
+                const newDistance = Phaser.Math.Distance.Between(
+                    pointers[0].x, pointers[0].y,
+                    pointers[1].x, pointers[1].y
+                );
+
+                const scaleFactor = newDistance / initialDistance;
+                draggableImage.setScale(scaleFactor);
+
+                initialDistance = newDistance;
+            }
+        });
+
+        this.input.on('pointerup', function (pointer) {
+            const index = pointers.indexOf(pointer);
+            if (index > -1) {
+                pointers.splice(index, 1);
+            }
         });
     }, this);
 
     this.load.start();
 }
+
 
 </script>
 </body>
