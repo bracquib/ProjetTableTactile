@@ -44,6 +44,10 @@
         </a>
         <a href="./rakura.php">
           <img draggable="false" class="proj-img" src="./rakura.jpeg" srcset="">
+        </a>
+        <a href="./threejs.php">
+          <img draggable="false" class="proj-img" src="./threejs.png" srcset="">
+        </a>
         <a href="./vue2048/index.html">
           <img draggable="false" class="proj-img" src="./2048_logo.png" srcset="">
         </a>
