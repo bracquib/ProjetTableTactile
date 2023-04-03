@@ -5,6 +5,7 @@ export default function Edt() {
         <div className="min-h-screen flex flex-col justify-center content-center border">
             <h1 className="font-mono text-3xl font-bold text-center mt-5">
                 Emploi du temps 📖
+                <li className="mb-5"><Link href="http://localhost:80/projet/ProjetTabletactile/index.php">Retour à la page d&apos;accueil 🏠</Link></li>
             </h1>
             <div className="justify-center content-center">
                 <div className="mt-5">
